@@ -42,34 +42,7 @@ void identificarPoligono(int numeroLados){
         case 8:
             cout << "Es un Octagono\n";
             break;
-            
-        default:
-            
-            break;
     }
-    
-    /*
-    if (numeroLados == 3) cout << "Es un Triangulo\n";
-    
-    else if (numeroLados == 4)
-        cout << "Es un Cuadrado\n";
-
-    
-    else if (numeroLados == 5) {
-        cout << "Es un Pentagono\n";
-    }
-    
-    else if (numeroLados == 6) {
-        cout << "Es un Hexagono\n";
-    }
-    
-    else if (numeroLados == 7) {
-        cout << "Es un Heptagono\n";
-    }
-    
-    else if (numeroLados == 8) {
-        cout << "Es un Octagono\n";
-    }*/
 }
 
 int main() {
