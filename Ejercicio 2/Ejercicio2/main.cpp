@@ -112,7 +112,7 @@ int obtenerModa(int *arreglo, int tamanoArreglo){
 }
 
 int main(int argc, char** argv) {
-    int *arreglo = nullptr;
+    int *arreglo = NULL;
     int tamanoArreglo = 0;
     int mayor;
     int menor;
@@ -140,29 +140,54 @@ int main(int argc, char** argv) {
                 imprimirArreglo(arreglo, tamanoArreglo);
                 break;
             case 2:
-                arreglo = ordenarMayorAMenor(arreglo, tamanoArreglo);
-                imprimirArreglo(arreglo, tamanoArreglo);
+                if (arreglo != NULL) {
+                    arreglo = ordenarMayorAMenor(arreglo, tamanoArreglo);
+                    imprimirArreglo(arreglo, tamanoArreglo);
+                }
+                else {
+                    cout << "\nArreglo no cargado\n";
+                }
                 break;
             case 3:
-                arreglo = ordenarMenorAMayor(arreglo, tamanoArreglo);
-                imprimirArreglo(arreglo, tamanoArreglo);
+                if (arreglo != NULL) {
+                    arreglo = ordenarMenorAMayor(arreglo, tamanoArreglo);
+                    imprimirArreglo(arreglo, tamanoArreglo);
+                }
+                else {
+                    cout << "\nArreglo no cargado\n";
+                }
                 break;
             case 4:
-                mayor = obtenerMayor(arreglo, tamanoArreglo);
-                menor = obtenerMenor(arreglo, tamanoArreglo);
-                cout << "\nMayor: " << mayor;
-                cout << "\nMenor: " << menor;
+                if (arreglo != NULL) {
+                    mayor = obtenerMayor(arreglo, tamanoArreglo);
+                    menor = obtenerMenor(arreglo, tamanoArreglo);
+                    cout << "\nMayor: " << mayor;
+                    cout << "\nMenor: " << menor;
+                }
+                else {
+                    cout << "\nArreglo no cargado\n";
+                }
                 break;
             case 5:
-                moda = obtenerModa(arreglo, tamanoArreglo);
-                cout << "\nModa: " << moda;
+                if (arreglo != NULL) {
+                    moda = obtenerModa(arreglo, tamanoArreglo);
+                    cout << "\nModa: " << moda;
+                }
+                else {
+                    cout << "\nArreglo no cargado\n";
+                }
                 break;
             case 6:
-                media = obtenerMedia(arreglo,tamanoArreglo);
-                cout << "\nMedia: " << media;
+                if (arreglo != NULL) {
+                    media = obtenerMedia(arreglo,tamanoArreglo);
+                    cout << "\nMedia: " << media;
+                }
+                else {
+                    cout << "\nArreglo no cargado\n";
+                }
                 break;
             case 7:
-                cout << "\nSaliendo nadie vera este mensaje";
+                cout << "\nSaliendo \n";
                 break;
                 
             default:
